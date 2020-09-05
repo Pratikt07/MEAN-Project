@@ -1,0 +1,98 @@
+<div class="container-fluid" style="margin-top: 15vh">
+  <div class="row justify-content-center" style="flex-wrap: wrap-reverse">
+    <div
+      class="col-12 col-md-6 d-flex p-0 rounded shadow-lg h-50"
+      style="
+        height: 80vh;
+        background-color: rgba(238, 237, 237, 0.808);
+        box-shadow: 10px;
+        flex-wrap: wrap-reverse;
+      "
+    >
+      <div
+        class="col-4 col-md-0 rounded"
+        style="
+          background: url(assets/lgin.jpg);
+          background-size: cover;
+
+          overflow: hidden;
+          color: aliceblue;
+        "
+      ></div>
+      <div class="col-8 rounded">
+        <div
+          class="row flex-column"
+          style="font-size: 25px; border-bottom-width: 2px; font-weight: bold"
+        >
+          <div class="col mt-4 d-flex flex-column align-items-center">
+            <div>Sign-In using</div>
+            <div>
+              <a href="#"><i class="fab fa-google-plus"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#">
+                <i class="fab fa-twitter" style="color: #1da1f2"></i
+              ></a>
+            </div>
+            <div style="font-size: 20px">OR</div>
+          </div>
+          <div>
+            <div
+              class="row justify-content-center align-items-center"
+              [formGroup]="cloginForm"
+            >
+              <div
+                class="col-12 d-flex justify-content-center align-items-center"
+                [formGroup]="cloginForm"
+              >
+                <div
+                  class="was-validated mt-2"
+                  style="width: 80%"
+                  [formGroup]="cloginForm"
+                >
+                  <label for=""> Email</label>
+                  <input
+                    class="form-control mb-2 border"
+                    name="Usernameid"
+                    placeholder="Email"
+                    formControlName="emailid"
+                  />
+                  <label for="">Password</label>
+                  <input
+                    type="password"
+                    class="form-control mb-2 border"
+                    name="userpassword"
+                    id=""
+                    placeholder="Password"
+                    formControlName="psw"
+                  />
+                  <!-- {{ cloginForm.value | json }} -->
+                  <button
+                    class="btn btn-success my-4"
+                    style="width: 100%"
+                    [disabled]="!cloginForm.valid"
+                    (click)="loginProcessHere()"
+                    routerLink="/home"
+                  >
+                    Login
+                  </button>
+
+                  <div
+                    id="helpId"
+                    class="form-text text-muted d-flex justify-content-center"
+                  >
+                    <a routerLink="/forget">Forgot Password?</a>
+                  </div>
+                  <small
+                    id="helpId"
+                    class="form-text text-muted d-flex justify-content-center mt-3 mb-5"
+                    ><a routerLink="/register">Create New Account</a></small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

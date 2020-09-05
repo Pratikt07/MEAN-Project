@@ -1,0 +1,978 @@
+<app-navbar></app-navbar>
+<div
+  class="container-fluid"
+  style="
+    background: linear-gradient(
+      rgb(36, 34, 34),
+      rgb(15, 13, 13),
+      rgb(218, 44, 31)
+    );
+    height: 100vh;
+    margin-top: 8vh;
+  "
+>
+  <div class="row d-flex justify-content-center mt-3" style="height: 80px">
+    <div
+      class="col-6 d-flex flex-column justify-content-center align-items-center text-light"
+      style="font-size: 40px"
+    >
+      MOVIE SEAT SELECTION
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt-1" style="height: 80px">
+    <div class="col-6 mt-2" style="font-size: 20p">
+      <input
+        class="form-control-lg mt-2 ml-1"
+        type="text"
+        placeholder="Enter Name"
+        style="width: 350px"
+      />
+      <input
+        class="form-control-lg mt-2 ml-3"
+        type="text"
+        placeholder="Enter contact"
+        style="width: 350px"
+      />
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center" style="height: 80px">
+    <div class="col-6" style="font-size: 20p">
+      <input
+        class="form-control-lg mt-2 ml-1"
+        type="text"
+        placeholder="Enter Date"
+        style="width: 350px"
+      />
+      <input
+        class="form-control-lg mt-2 ml-3"
+        type="text"
+        placeholder="Seat No"
+        style="width: 350px"
+      />
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center" style="height: 60px">
+    <div class="col-6" style="font-size: 20px">
+      <button class="btn btn-light btn-lg ml-1" style="width: 715px">
+        Start Selecting
+      </button>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt- mb-2" style="height: 50px">
+    <div class="col-6 text-light" style="font-size: 20px">
+      <fa-icon [icon]="faSquare" style="color: green"></fa-icon> Selected Seat
+      <fa-icon
+        [icon]="faSquare"
+        style="color: rgba(253, 27, 27, 0.952); margin-left: 20px"
+      ></fa-icon>
+      Reserved Seat
+      <fa-icon
+        [icon]="faSquare"
+        style="color: white; margin-left: 20px"
+      ></fa-icon>
+      Empty Seat
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center mt-0" style="height: 350px">
+    <div class="col-2 text-light" style="font-size: 20px">
+      <div>
+        A<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        B<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        C<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        D<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        E<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <br />
+      <div>
+        F<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        G<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        H<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        I<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        J<fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+    </div>
+    <div class="col-4 text-light" style="font-size: 20px">
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+
+      <br />
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+      <div>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+        <fa-icon
+          [icon]="faSquare"
+          (click)="seatBook()"
+          style="color: white; margin-left: 20px"
+        ></fa-icon>
+      </div>
+    </div>
+  </div>
+</div>

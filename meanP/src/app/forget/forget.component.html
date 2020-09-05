@@ -1,0 +1,73 @@
+<div class="container-fluid" style="margin-top: 20vh">
+  <div class="row justify-content-center" style="flex-wrap: wrap-reverse">
+    <div
+      class="col-12 col-md-6 d-flex p-0 rounded"
+      style="
+        height: 500px;
+        background-color: rgba(238, 237, 237, 0.75);
+        box-shadow: 4px 14px 28px rgba(0, 0, 0, 0.7);
+      "
+    >
+      <div
+        class="col-4 rounded"
+        style="
+          background: url(assets/lgin.jpg);
+          background-size: cover;
+
+          overflow: hidden;
+          color: aliceblue;
+        "
+      ></div>
+      <div class="col-8 rounded">
+        <div
+          class="row"
+          style="font-size: 25px; border-bottom-width: 2px; font-weight: bold"
+        >
+          <div class="col mt-5 d-flex flex-column align-items-center">
+            <div>Reset Password</div>
+          </div>
+        </div>
+        <div>
+          <div class="row justify-content-center align-items-center">
+            <div
+              class="col-12 d-flex justify-content-center align-items-center mt-3"
+            >
+              <div class="was-validated mt-5" style="width: 80%">
+                <label for="">Email </label>
+                <input
+                  type="text"
+                  class="form-control mb-4 border"
+                  name="Usernameid"
+                  value=""
+                  id=""
+                  placeholder="Email"
+                  pattern="([a-zA-Z]+[a-zA-Z0-9]*@[a-zA-Z]+(.)(com|in))|([a-zA-Z]+[a-zA-Z0-9]*)"
+                  maxlength="20"
+                  minlength="5"
+                  required
+                />
+
+                <button
+                  type="submit"
+                  class="btn btn-success my-4"
+                  name=""
+                  id=""
+                  value="Login"
+                  style="width: 100%"
+                  routerLink="/login"
+                >
+                  Login
+                </button>
+
+                <!--<small id="helpId" class="form-text text-muted d-flex justify-content-center"><a
+                      href="forgotpass.html">Forgot Password?</a></small>
+              <small id="helpId" class="form-text text-muted d-flex justify-content-center mt-3 mb-5"><a
+                      href="registration.html">Create New Account</a></small>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

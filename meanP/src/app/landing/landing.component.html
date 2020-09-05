@@ -1,0 +1,129 @@
+<app-navbar></app-navbar>
+<div class="container-fluid p-0" style="height: 90.7vh">
+  <div
+    id="carouselExampleCaptions"
+    class="carousel slide m-0 p-0"
+    data-ride="carousel"
+    style="height: 90vh"
+  >
+    <ol class="carousel-indicators">
+      <li
+        data-target="#carouselExampleCaptions"
+        data-slide-to="0"
+        class="active"
+      ></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner align-items-center" style="height: 100%">
+      <div
+        class="carousel-item active p-0 m-0"
+        style="
+          background-image: url(assets/banner1.jpg);
+          background-size: cover;
+
+          height: 100%;
+        "
+      ></div>
+      <div
+        class="carousel-item"
+        style="
+          background-image: url(assets/banner2.jpg);
+          background-size: cover;
+          background-position: center;
+          height: 100%;
+        "
+      >
+        >
+        <!-- <img
+            src="assets/alien.jpg"
+            class="d-block w-100"
+            alt="alien-movie-poster"
+            style="object-fit: cover; height: 100%; width: 100%"
+          /> -->
+      </div>
+      <div
+        class="carousel-item"
+        style="
+          background-image: url(assets/banner3.jpg);
+          background-size: cover;
+          background-position: center;
+          height: 100%;
+        "
+      >
+        >
+        <!-- <img
+            src="assets/godzilla.jpg"
+            class="d-block w-100"
+            alt="godzilla-poster"
+            style="object-fit: cover; height: 100%; width: 100%"
+          /> -->
+      </div>
+      <div class="carousel-item">
+        <img
+          src="assets/banner4.jpg"
+          class="d-block w-100"
+          alt="alien-movie-poster"
+          style="
+            object-fit: cover;
+            height: 100%;
+            border-radius: 10px;
+            width: 100%;
+          "
+        />
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#carouselExampleCaptions"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#carouselExampleCaptions"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <hr style="width: 50%; color: black" />
+    <div class="row p-0 m-0">
+      <div class="col">
+        <div class="col-12 d-flex justify-content-center my-3">
+          <div class="btn-group" role="group" aria-label="Basic example">
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-lg active"
+              routerLink="/home"
+            >
+              Top Rated
+            </button>
+
+            <button
+              type="button"
+              area-pressed="true"
+              class="btn btn-outline-danger btn-lg"
+              routerLink="/New"
+            >
+              New Release
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-lg"
+              routerLink="/Comings"
+            >
+              Coming Soon
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-trending></app-trending>
+  </div>
+</div>

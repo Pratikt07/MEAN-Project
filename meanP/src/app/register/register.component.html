@@ -1,0 +1,111 @@
+<app-navbar></app-navbar>
+<div class="container-fluid" style="margin-top: 15vh">
+  <div class="row justify-content-center" style="flex-wrap: wrap-reverse">
+    <div
+      class="col-12 col-md-6 d-flex p-0 rounded"
+      style="
+        background-color: rgba(238, 237, 237, 0.808);
+        box-shadow: 4px 14px 28px rgba(0, 0, 0, 0.7);
+      "
+    >
+      <div
+        class="col-4 rounded"
+        style="
+          background: url(assets/lgin.jpg);
+          background-size: cover;
+
+          overflow: hidden;
+          color: aliceblue;
+        "
+      ></div>
+      <div class="col-8 rounded">
+        <div
+          class="row"
+          style="font-size: 25px; border-bottom-width: 2px; font-weight: bold"
+        >
+          <div class="col mt-4 d-flex flex-column align-items-center">
+            <div>Sign-Up using</div>
+            <div>
+              <a href="#" style="color: red"
+                ><i class="fab fa-google-plus"></i
+              ></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#">
+                <i class="fab fa-twitter" style="color: #1da1f2"></i
+              ></a>
+            </div>
+            <div style="font-size: 20px">OR</div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="row justify-content-center align-items-center"
+            [formGroup]="cregisterForm"
+          >
+            <div
+              class="col-12 d-flex justify-content-center align-items-center"
+              [formGroup]="cregisterForm"
+            >
+              <div
+                class="ng-valid mt-3"
+                style="width: 80%"
+                [formGroup]="cregisterForm"
+              >
+                <label>First Name</label>
+                <input
+                  type="text"
+                  class="form-control mb-2 border"
+                  name="First Name"
+                  value=""
+                  id=""
+                  placeholder="First Name"
+                  formControlName="firstname"
+                />
+                <label for="">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control mb-2 border"
+                  name="Usernameid"
+                  placeholder="Last Name"
+                  formControlName="lastname"
+                />
+
+                <label for=""> Email</label>
+                <input
+                  class="form-control mb-2 border"
+                  name="Usernameid"
+                  placeholder="Email"
+                  formControlName="emailid"
+                />
+                <label for="">Password</label>
+                <input
+                  type="password"
+                  class="form-control mb-2 border"
+                  name="userpassword"
+                  id=""
+                  placeholder="Password"
+                  formControlName="psw"
+                />
+                <button
+                  class="btn btn-success my-2"
+                  style="width: 100%"
+                  [disabled]="!cregisterForm.valid"
+                  (click)="registerHere()"
+                >
+                  Sign Up
+                </button>
+
+                <div
+                  id="helpId"
+                  class="form-text text-muted d-flex justify-content-center mb-3"
+                >
+                  <a routerLink="/login">Log In Yourself</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
